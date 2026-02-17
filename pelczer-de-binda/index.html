@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andreas Pelczer — Koch. Entwickler. Autor.</title>
+    <meta name="description" content="36 Jahre Küche. Jetzt Software, die Menschen schützt statt kontrolliert. Apps, Bücher und Beratung von Andreas Pelczer / B.I.N.D.A. Verlag.">
+    <meta name="author" content="Andreas Pelczer">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Andreas Pelczer — Koch. Entwickler. Autor.">
+    <meta property="og:description" content="36 Jahre Küche. Das Problem war nie die Sauce.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pelczer.de">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Styles (MVVM: View Layer) -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-mode="human">
+
+    <!-- ====================================================
+         MODE TOGGLE — Mensch / Coder
+         ==================================================== -->
+    <div class="mode-toggle-wrap">
+        <button class="mode-toggle" id="modeToggle" aria-label="Ansicht wechseln zwischen Mensch und Coder Modus"></button>
+        <span class="mode-label" id="modeLabel">Mensch</span>
+    </div>
+
+    <!-- ====================================================
+         NAVIGATION
+         ==================================================== -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-brand">Andreas Pelczer</a>
+            <button class="nav-menu-btn" id="navMenuBtn" aria-label="Menü öffnen">
+                <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#apps">Apps</a></li>
+                <li><a href="#books">Bücher</a></li>
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ====================================================
+         HERO
+         ==================================================== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-eyebrow">B.I.N.D.A. Verlag · Frankfurt am Main</div>
+
+                <h1>
+                    <span class="desc-human">36 Jahre Küche.<br>Das Problem war nie <em>die Sauce.</em></span>
+                    <span class="desc-coder">36 Jahre Produktion.<br>Jetzt <em>Systeme.</em></span>
+                </h1>
+
+                <p class="hero-text">
+                    <span class="desc-human">Ich bin Andreas — Koch, Autor und App-Entwickler. Nach über drei Jahrzehnten in professionellen Küchen habe ich angefangen, die Werkzeuge zu bauen, die ich damals gebraucht hätte. Apps für Köche, Bücher über das, was in Küchen wirklich passiert, und Software, die Menschen schützt statt kontrolliert.</span>
+                    <span class="desc-coder">Andreas Pelczer — Gardemanger, Souschef, Küchenchef. Irgendwann gemerkt, dass das eigentliche Problem nie die Sauce war, sondern das System drumherum. Heute baue ich Software für Menschen, die unter Druck arbeiten. Swift, SwiftUI, MUMPS-inspiriert, offline-first.</span>
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#apps" class="btn btn-primary">Meine Apps entdecken</a>
+                    <a href="#books" class="btn btn-secondary">Bücher ansehen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         APPS
+         ==================================================== -->
+    <section id="apps">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">Apps</div>
+                <h2 class="section-title">Werkzeuge aus der Praxis</h2>
+                <p class="section-subtitle">
+                    <span class="desc-human">Apps, die ich gebaut habe, weil sie gefehlt haben. Für Köche, für Azubis, für alle, die ihr Geld im Griff haben wollen.</span>
+                    <span class="desc-coder">Native iOS · Swift · SwiftUI · SwiftData · Offline-First</span>
+                </p>
+            </div>
+
+            <div class="grid-2 stagger">
+
+                <!-- Matjes, der junge Hering -->
+                <div class="card app-card fade-in">
+                    <div class="app-card-header">
+                        <div class="app-icon" style="background: linear-gradient(135deg, #1a4a7a, #2a6ab0);">
+                            <!-- TODO: Echtes Icon einsetzen -->
+                            <span style="font-size: 28px;">🐟</span>
+                        </div>
+                        <div>
+                            <h3>Matjes, der junge Hering</h3>
+                            <div class="app-tagline">AusbildungsSpielKoch</div>
+                        </div>
+                    </div>
+                    <p>
+                        <span class="desc-human">Du machst eine Kochausbildung? Matjes hilft dir spielerisch beim Lernen — Küchenfachkunde, Warenkunde, Prüfungsvorbereitung. Wie ein Karteikarten-System, nur mit mehr Spaß.</span>
+                        <span class="desc-coder">Gamifizierte Lern-App für Kochausbildung. SwiftUI, SwiftData. Einstiegspunkt ins Gastri-Grid Ökosystem. Karteikartensystem mit Spaced Repetition für IHK-Prüfungsvorbereitung.</span>
+                    </p>
+                    <span class="badge badge-live">Im App Store</span>
+                    <div class="link-row">
+                        <a href="apps/matjes.html" class="link-arrow">Mehr erfahren →</a>
+                    </div>
+                </div>
+
+                <!-- Matjes-Pro -->
+                <div class="card app-card fade-in">
+                    <div class="app-card-header">
+                        <div class="app-icon" style="background: linear-gradient(135deg, #1a4a7a, #4a8ad0);">
+                            <span style="font-size: 28px;">🐟</span>
+                        </div>
+                        <div>
+                            <h3>Matjes-Pro</h3>
+                            <div class="app-tagline">Für Ausbilder &amp; Berufsschulen</div>
+                        </div>
+                    </div>
+                    <p>
+                        <span class="desc-human">Die Profi-Version für Ausbilder, Berufsschullehrer und Prüfer. Eigene Fragenkataloge erstellen, Lernfortschritte verfolgen.</span>
+                        <span class="desc-coder">Erweiterte Version mit Content-Management für Ausbilder. Custom Question Sets, Progress Tracking, Export-Funktionen.</span>
+                    </p>
+                    <span class="badge badge-wip">In Prüfung</span>
+                    <div class="link-row">
+                        <a href="apps/matjes-pro.html" class="link-arrow">Mehr erfahren →</a>
+                    </div>
+                </div>
+
+                <!-- iMOPS Gastro-Grid -->
+                <div class="card app-card fade-in">
+                    <div class="app-card-header">
+                        <div class="app-icon" style="background: linear-gradient(135deg, #c44e1a, #e87830);">
+                            <span style="font-size: 28px;">🔥</span>
+                        </div>
+                        <div>
+                            <h3>iMOPS Gastro-Grid</h3>
+                            <div class="app-tagline">Küchenmanagementsystem</div>
+                        </div>
+                    </div>
+                    <p>
+                        <span class="desc-human">Digitale Küchenverwaltung — HACCP-Listen, Aufgabenverteilung, Schichtplanung. Funktioniert auch ohne WLAN, weil im Keller keins ist. Entwickelt von einem Koch, nicht von einer IT-Firma.</span>
+                        <span class="desc-coder">In-Memory Kernel für Produktionssteuerung. HACCP-konform, offline, deterministisch. MUMPS-inspiriert. Rollenbasiert (Küchenchef bis Leihkoch). MenschMeierModus für Anti-Surveillance, BourdainGuard für Worker Protection.</span>
+                    </p>
+                    <span class="badge badge-live">Im App Store</span>
+                    <div class="link-row">
+                        <a href="apps/imops.html" class="link-arrow">Mehr erfahren →</a>
+                        <a href="https://github.com/AndreasPelczer/iMOPS_OS_CORE" class="link-arrow desc-coder">GitHub →</a>
+                    </div>
+                </div>
+
+                <!-- MoneyPath2026 -->
+                <div class="card app-card fade-in">
+                    <div class="app-card-header">
+                        <div class="app-icon" style="background: linear-gradient(135deg, #1a6a3a, #2a9a50);">
+                            <span style="font-size: 28px;">💰</span>
+                        </div>
+                        <div>
+                            <h3>MoneyPath2026</h3>
+                            <div class="app-tagline">Finanzen verstehen</div>
+                        </div>
+                    </div>
+                    <p>
+                        <span class="desc-human">Geld im Griff, ohne BWL-Studium. MoneyPath zeigt dir, wo dein Geld hingeht und hilft dir, bessere Entscheidungen zu treffen. Einfach, ehrlich, ohne Werbung.</span>
+                        <span class="desc-coder">Personal Finance Tracker. SwiftUI, SwiftData. Tip-Jar Monetarisierung. Keine Ads, kein Tracking. Offline-first.</span>
+                    </p>
+                    <span class="badge badge-live">Im App Store</span>
+                    <div class="link-row">
+                        <a href="apps/moneypath.html" class="link-arrow">Mehr erfahren →</a>
+                    </div>
+                </div>
+
+                <!-- SOLARA -->
+                <div class="card app-card fade-in">
+                    <div class="app-card-header">
+                        <div class="app-icon" style="background: linear-gradient(135deg, #7a3ab0, #a060d0);">
+                            <span style="font-size: 28px;">✨</span>
+                        </div>
+                        <div>
+                            <h3>SOLARA</h3>
+                            <div class="app-tagline">Satirische To-Do-App</div>
+                        </div>
+                    </div>
+                    <p>
+                        <span class="desc-human">Eine To-Do-App, die manchmal einfach „Nein" sagt. Kosmische Zustände, esoterische Pop-ups und eine 30%-Chance, dass deine Aufgabe abgelehnt wird. Weil nicht alles immer funktionieren muss.</span>
+                        <span class="desc-coder">Satirische Productivity-App. Randomisierte Task-Ablehnung, esoterisches UI, kosmische States. Open Source, MIT Lizenz.</span>
+                    </p>
+                    <span class="badge badge-live">Im App Store</span>
+                    <div class="link-row">
+                        <a href="apps/solara.html" class="link-arrow">Mehr erfahren →</a>
+                    </div>
+                </div>
+
+            </div><!-- /grid-2 -->
+        </div>
+    </section>
+
+    <!-- ====================================================
+         QUOTE BREAK
+         ==================================================== -->
+    <section class="quote-section">
+        <div class="container fade-in">
+            <p class="quote-text">„Das eigentliche Problem war nie die Sauce, sondern das System drumherum."</p>
+            <p class="quote-attr">— README.md</p>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         BÜCHER
+         ==================================================== -->
+    <section id="books" class="bg-alt">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">Publikationen</div>
+                <h2 class="section-title">Bücher</h2>
+                <p class="section-subtitle">
+                    <span class="desc-human">Was in Küchen wirklich passiert — und warum Systeme wichtiger sind als Motivation.</span>
+                    <span class="desc-coder">Fachbuch · Lehrbuch · Memoir</span>
+                </p>
+            </div>
+
+            <div class="grid-3 stagger">
+
+                <div class="card book-card fade-in">
+                    <h3>Thermodynamik der Arbeit</h3>
+                    <div class="book-meta">Fachbuch · 2025 · Erhältlich</div>
+                    <p>
+                        <span class="desc-human">Warum scheitern Teams, obwohl alle „motiviert" sind? Dieses Buch erklärt, warum es nicht an den Menschen liegt, sondern an den Strukturen. Kein Motivationsratgeber — ein Systembuch.</span>
+                        <span class="desc-coder">Warum Systeme kollabieren. Keine Motivation, keine Moral — nur Struktur. Die theoretische Grundlage hinter iMOPS. Thermodynamische Analogien auf Arbeitsorganisation angewandt.</span>
+                    </p>
+                    <div class="link-row">
+                        <a href="https://www.amazon.de/dp/B0GK95MWB5" class="link-arrow">Bei Amazon →</a>
+                        <a href="books/thermodynamik.html" class="link-arrow">Leseprobe →</a>
+                    </div>
+                </div>
+
+                <div class="card book-card fade-in">
+                    <h3>Der junge Hering</h3>
+                    <div class="book-meta">Lehrbuch · 2025 · Erhältlich</div>
+                    <p>
+                        <span class="desc-human">Dein Begleiter durch die Kochausbildung. Alles, was du für die IHK-Prüfung brauchst, geschrieben von jemandem, der 36 Jahre in Küchen gestanden hat. Das Begleitbuch zur Matjes-App.</span>
+                        <span class="desc-coder">Companion Book zur AusbildungsSpielKoch-App. IHK-Prüfungsvorbereitung Koch/Köchin. Entry Point ins Gastri-Grid Ökosystem.</span>
+                    </p>
+                    <div class="link-row">
+                        <a href="books/junger-hering.html" class="link-arrow">Mehr erfahren →</a>
+                    </div>
+                </div>
+
+                <div class="card book-card fade-in">
+                    <h3>Der Küchencode</h3>
+                    <div class="book-meta">Memoir · 2026 · ~70% fertig</div>
+                    <p>
+                        <span class="desc-human">36 Jahre professionelle Küche. Von der Bundeswehr-Brigade bis zum Systemarchitekten. Drei Stimmen erzählen eine Geschichte — die Geschichte hinter allem, was ich heute mache.</span>
+                        <span class="desc-coder">Memoir. 36 Jahre. Bundeswehr-Brigade bis System Architect. Drei-Stimmen-Narrative-Struktur. Die Geschichte hinter iMOPS und der Thermodynamik der Arbeit.</span>
+                    </p>
+                    <div class="link-row">
+                        <a href="books/kuechencode.html" class="link-arrow">Leseprobe →</a>
+                    </div>
+                </div>
+
+            </div><!-- /grid-3 -->
+        </div>
+    </section>
+
+    <!-- ====================================================
+         PRINZIPIEN (nur Coder-Modus)
+         ==================================================== -->
+    <section class="coder-only">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">Prinzipien</div>
+                <h2 class="section-title">Wie ich baue</h2>
+            </div>
+            <div class="grid-4 stagger">
+                <div class="principle-card fade-in">
+                    <h4>Offline zuerst</h4>
+                    <p>Im Keller gibt's kein WLAN. Um 20:30 wartet niemand auf einen Server.</p>
+                </div>
+                <div class="principle-card fade-in">
+                    <h4>Menschen über Profit</h4>
+                    <p>Systeme die funktionieren, entlasten Menschen. Systeme die „motivieren", belasten sie.</p>
+                </div>
+                <div class="principle-card fade-in">
+                    <h4>Korrektes Verhalten, einfach gemacht</h4>
+                    <p>Wenn das Richtige schwerer ist als das Falsche, ist das System schuld.</p>
+                </div>
+                <div class="principle-card fade-in">
+                    <h4>SET / GET / KILL</h4>
+                    <p>Wenn du ein Handbuch brauchst, ist es zu komplex. Fertig.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         STACK (nur Coder-Modus)
+         ==================================================== -->
+    <section class="coder-only bg-alt">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">Stack</div>
+                <h2 class="section-title">Kein Schnickschnack.</h2>
+            </div>
+            <div class="stack-tags fade-in">
+                <span class="stack-tag">Swift</span>
+                <span class="stack-tag">SwiftUI</span>
+                <span class="stack-tag">SwiftData</span>
+                <span class="stack-tag">Xcode</span>
+                <span class="stack-tag">Offline-First</span>
+                <span class="stack-tag">HACCP</span>
+                <span class="stack-tag">ISO 9001</span>
+                <span class="stack-tag">MUMPS-Inspired</span>
+                <span class="stack-tag">GitHub Pages</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         ÜBER MICH
+         ==================================================== -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-label">Über mich</div>
+                <h2 class="section-title">Andreas Pelczer</h2>
+            </div>
+
+            <div class="split-grid fade-in">
+                <div>
+                    <p style="font-size: 16px; line-height: 1.8; margin-bottom: 16px;">
+                        <span class="desc-human">Ich habe mit 16 angefangen zu kochen und 36 Jahre lang nicht mehr aufgehört. Gardemanger, Souschef, Küchenchef, Betriebsleiter — ich kenne jede Position in einer Küche. Großverpflegung, Sterneküche, Kliniken, Europa-Park, Bundeswehr.</span>
+                        <span class="desc-coder">36 Jahre professionelle Gastronomie. Gardemanger → Souschef → Küchenchef → Betriebsleiter. Großverpflegung, Sterneküche, Kliniken, Europa-Park, Bundeswehr (600-Mann-Brigade).</span>
+                    </p>
+                    <p style="font-size: 16px; line-height: 1.8; margin-bottom: 16px;">
+                        <span class="desc-human">Irgendwann habe ich gemerkt, dass die eigentlichen Probleme in Küchen nicht die Gerichte sind — sondern die Systeme, in denen Menschen arbeiten. Also habe ich angefangen, bessere Systeme zu bauen. Erst auf Papier, dann als Software.</span>
+                        <span class="desc-coder">2023–2024: iOS-Entwicklung am Syntax Institut. Swift, SwiftUI, Xcode. Seitdem: iMOPS-Kernel, fünf veröffentlichte Apps, drei Bücher. MUMPS-Background durch den Vater (Krankenhaussysteme).</span>
+                    </p>
+                    <p style="font-size: 16px; line-height: 1.8;">
+                        <span class="desc-human">Heute entwickle ich Apps, schreibe Bücher und berate Betriebe — alles mit einem Ziel: Arbeit muss funktionieren, ohne Menschen kaputt zu machen.</span>
+                        <span class="desc-coder">Gründer B.I.N.D.A. Verlag. iOS-Entwicklung, Fachbuch-Autor, System-Architektur für Produktionsumgebungen. Frankfurt am Main / Wertheim.</span>
+                    </p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-year">2024 —</span>
+                        <div class="timeline-content">
+                            <h4>B.I.N.D.A. Verlag</h4>
+                            <p>Apps, Bücher, Systemarchitektur</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2023 — 24</span>
+                        <div class="timeline-content">
+                            <h4>Syntax Institut</h4>
+                            <p>iOS-Entwicklung · Swift · SwiftUI</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">1994 — 98</span>
+                        <div class="timeline-content">
+                            <h4>Bundeswehr — Küchenchef</h4>
+                            <p>600-Mann-Brigade</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">1988 —</span>
+                        <div class="timeline-content">
+                            <h4>36 Jahre Gastronomie</h4>
+                            <p>Gardemanger → Küchenchef → Systeme</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         FOOTER
+         ==================================================== -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-brand">B.I.N.D.A. Verlag</div>
+            <p class="footer-sub">Andreas Pelczer · Frankfurt am Main / Wertheim</p>
+
+            <div class="footer-links">
+                <a href="https://github.com/AndreasPelczer">GitHub</a>
+                <a href="https://www.linkedin.com/in/andreas-pelczer-5b5050160/">LinkedIn</a>
+                <a href="https://www.amazon.de/Thermodynamik-Arbeit-warum-Systeme-kollabieren/dp/B0GK95MWB5">Amazon</a>
+            </div>
+
+            <div class="footer-legal">
+                <a href="legal/impressum.html">Impressum</a> · <a href="legal/datenschutz.html">Datenschutz</a>
+                <br><br>
+                © 2026 B.I.N.D.A. Verlag · <span class="footer-easter" id="easterEgg" title="Memento Mori">MEMENTO MORI</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====================================================
+         EASTER EGG — Game of Life Overlay
+         ==================================================== -->
+    <div class="gol-overlay" id="golOverlay">
+        <button class="gol-close" id="golClose" aria-label="Schließen">×</button>
+        <canvas class="gol-canvas" id="golCanvas" width="400" height="400"></canvas>
+        <div class="gol-info">Conway's Game of Life · 4 Regeln. Keine Steuerung. Emergenz. · Klick = Zelle setzen · ESC = Schließen</div>
+    </div>
+
+    <!-- Scripts (MVVM: Model + ViewModel Layer) -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/easter-egg.js"></script>
+
+</body>
+</html>
